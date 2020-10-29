@@ -12,7 +12,7 @@ https://readme42.com
 $ [sudo] pip install django-http-last-modified-view
 ```
 
-#### Examples
+##### `views.py`
 `get_http_last_modified`
 ```python
 from django_http_last_modified_view.views import HttpLastModifiedMixin

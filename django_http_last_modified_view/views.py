@@ -15,10 +15,10 @@ class HttpLastModifiedMixin:
         last_modified = self.get_http_last_modified()
         if not last_modified:
             return
-        if isinstance(last_modified, date):
-            return http_date(datetime.combine(last_modified, datetime.min.time()))
         if isinstance(last_modified, datetime):
             return http_date(last_modified.timestamp())
+        if isinstance(last_modified, date):
+            return http_date(datetime.combine(last_modified, datetime.min.time()))
         if isinstance(last_modified, int):
             return http_date(last_modified)
 
